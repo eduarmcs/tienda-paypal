@@ -1,0 +1,78 @@
+@media screen and (max-width: 767px) {
+   header{
+      width: auto;
+   }
+   .title{
+      font-size: 20px;
+   }
+   .product{
+      display: grid;
+      grid-gap: 10px;
+      justify-content: center;
+  } 
+  .container-product{
+      display: block;
+      grid-gap: 10px;
+      width: 100vw;
+      grid-template-rows: 1fr auto  auto 1fr;
+      grid-template-areas: "header header     header header"
+                           "title  title      title  title"
+                           ". product-1  product-1 ."
+                           ". product-2  product-2 ."
+                           "header header  header header";
+
+  }
+  .product-detail {
+   text-align: center;
+   font-size: 16px;
+ }
+ .product-detail button{
+   width: 150px;
+   font-size: 16px;
+ }
+ .container-product .product-detail{
+    margin: auto;
+    margin-bottom: 30px;
+    width: 300px;
+ }
+  
+ .mention{
+   display: grid;
+   grid-gap: 10px;
+   grid-template-columns: auto; 
+   justify-content: center;
+ }
+ .container-mention{
+   display: block;
+   grid-gap: 10px;
+   margin-top: 20px;
+   padding-bottom: 50px;
+   width: 100vw;
+   grid-template-columns:1fr auto  auto auto  1fr;
+   grid-template-areas: "title    title    title    title    title "
+                        ". .  mention1    . ."
+                        ". .  mention2    . ."
+                        ". .  mention3    . ."
+                        ". .  mention4    . .";
+ }
+ .container-mention {
+   text-align: center;
+   font-size: 16px;
+
+ }
+ .container-mention .mention-detail{
+   margin: auto;
+   margin-bottom: 30px;
+   width: 300px;
+ }
+ h2{
+    font-size: 16px;
+ }
+ p{
+    font-size: 12px;
+ }
+
+}
+  
+  
+  

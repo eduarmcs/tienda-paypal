@@ -1,0 +1,59 @@
+.content{  /* GRID PADRE */
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: auto; 
+    justify-content: center;
+}
+.container-content{ /* GRID HIJO */
+    display: grid;
+    grid-gap: 10px;
+    width: 768px;
+    grid-template-rows:repeat(3, 250px);
+    grid-template-areas: "container-detail-1"
+                         "container-detail-2"
+                         "container-detail-3";
+}
+
+.content-detail-1{  /* GRID NIETO */
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-areas: "content-image content-description content-description";
+    grid-area: container-detail-1;
+    align-items: center;
+}
+.content-detail-1 .content-description{
+    padding: 20px;
+    grid-area: content-description;
+}
+
+.content-detail-3{   /* GRID NIETO */
+    display: grid;
+    grid-template-columns: auto 1fr 1fr;
+    grid-template-areas: "content-image content-description content-description";
+    grid-area: container-detail-3;
+    align-items: center;
+}
+.content-detail-3 .content-description{
+    padding: 20px;
+    grid-area: content-description;
+}
+
+.content-detail-2{   /* GRID NIETO */
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    grid-template-areas: "content-description content-description content-image";
+    grid-area: container-detail-2;
+    align-items: center;
+}
+.content-detail-2 .content-description{
+    grid-area: content-description;
+}
+
+.content-image img{
+    padding: 30px;
+    height: 100px;
+    width: 100px;
+}
+.content-description{
+    text-align: justify;
+}
